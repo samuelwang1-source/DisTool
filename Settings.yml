@@ -1,0 +1,48 @@
+#       ██████╗░██╗░██████╗████████╗░█████╗░░█████╗░██╗░░░░░
+#       ██╔══██╗██║██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██║░░░░░
+#       ██║░░██║██║╚█████╗░░░░██║░░░██║░░██║██║░░██║██║░░░░░
+#       ██║░░██║██║░╚═══██╗░░░██║░░░██║░░██║██║░░██║██║░░░░░
+#       ██████╔╝██║██████╔╝░░░██║░░░╚█████╔╝╚█████╔╝███████╗
+#       ╚═ ════╝░╚═╝╚═════╝░░░░╚═╝░░░░╚════╝░░╚════╝░╚══════╝
+#
+#       -Created and Coded By Samuel Wang
+#       -Code Revised and Cleaned By Samuel Wang
+#       -Setting File for project.Free Nitro
+#       -Contact Senior#9999 For any assistence
+
+Nitro:
+  #Message Display or not?
+  messageDisPlay: false
+
+  #Do you wanna look at the annoucnments?
+  announce_check: true
+
+  #Do you need the newest version, I think you will need it!
+
+  check_for_updates: true
+
+  #Debug Options
+  Debug: false
+
+  #How many threads you want, recommending 200 threads, will be laggy if there are more.
+  Threads: 1000
+
+  #Nitro type classic or boost, classic is 16 digits and boost is 24 digits
+  nitro_type: "classic"
+
+  proxy:
+
+    #do you wanna auto proxy-scrape, the settings of proxy-scrape is going to be pre-determined.
+    auto_proxy: false
+
+    #proxy api website
+    proxy_api_url: None
+
+    #proxy_type,https,socks4,socks5
+    proxy_type: "https"
+
+    #proxy timeout 1000ms = 1 sec
+    timeout: 10000
+
+
+
