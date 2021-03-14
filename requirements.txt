@@ -1,0 +1,10 @@
+requests
+colorama
+easygui
+base64
+threading
+random
+string
+os
+sys
+time
