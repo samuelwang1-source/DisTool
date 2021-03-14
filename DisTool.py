@@ -17,7 +17,7 @@ invalid = 0
 limitations = 0
 repeat = 0
 fail = 0
-
+current_version = 1.4
 
 def title():
     while True:
@@ -25,6 +25,15 @@ def title():
         global invalid
         os.system(f"title Samuel's Nitro Gen Valid : [{valid}]  Invalid : [{invalid}]")
 
+def check_updates():
+    ver = session.get("https://raw.githubusercontent.com/samuelwang1-source/DisTool/main/version").text
+    ver = ver.splitlines()
+    ver = ver[0]
+    ver = float(ver)
+    if current_version == ver:
+        print(f"{Fore.BLUE}You are using the Latest version!")
+    elif current_version <= ver:
+        print(f"{Fore.BLUE}You are not using the latest version!, its {ver}")
 
 def announcments():
     anno = requests.get("https://raw.githubusercontent.com/samuelwang1-source/DisTool/main/announcement")
@@ -232,6 +241,7 @@ class Nitro:
     NitroType = str(settings["Nitro"]["nitro_type"])  # Yes
     messageDisPlay = bool(settings["Nitro"]["messageDisPlay"])  # NO
     proxy_type = str(settings["Nitro"]["proxy"]["proxy_type"])
+    update = bool(settings["Nitro"]["check_for_updates"])
 
 if __name__ == "__main__":
     count = 0
@@ -240,6 +250,8 @@ if __name__ == "__main__":
     characters = string.ascii_letters + string.digits
     current_path = os.path.dirname(os.path.realpath(__file__))
     session = Session()
+    if Nitro.update == True:
+        check_updates()
     if Nitro.announcments_check == True:
         announcments()
     print(f"""{Fore.LIGHTBLUE_EX}
