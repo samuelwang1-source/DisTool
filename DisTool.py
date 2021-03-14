@@ -27,7 +27,7 @@ def title():
 
 
 def announcments():
-    anno = requests.get("https://gitee.com/samuelwang1/qq8e-information-acquisition/raw/master/Announcement.txt")
+    anno = requests.get("https://raw.githubusercontent.com/samuelwang1-source/DisTool/main/announcement")
     print(f"{Fore.WHITE}{anno.text}")
 
 
